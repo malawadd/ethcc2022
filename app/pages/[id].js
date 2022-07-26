@@ -5,6 +5,7 @@ import { useRouter } from "next/router";
 import DayPicker from "../components/daypicker";
 import TimePicker from "../components/timepicker";
 import ConfirmationBox from "../components/confirmationbox";
+import { formatAddr } from '../utils'
  
 
 function Booking(){
@@ -36,7 +37,7 @@ function Booking(){
                 <div className="flex flex-col items-center justify-center py-2">
                     <main className="flex flex-col items-center justify-center w-full flex-1 px-20 text-center">
                     <div className="text-3xl py-6 font-bold underline decoration-8 decoration-[#B4AAD0]">
-                        {`Book a meeting with ${(id)}` || "Loading"}
+                        {`Book a meeting with ${formatAddr(id)}` || "Loading"}  
                         </div>
                         <div className="flex justify-evenly w-full">
                             <div className="flex flex-col justify-between">

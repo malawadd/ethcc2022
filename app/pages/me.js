@@ -5,6 +5,7 @@ import { ethers } from "ethers";
 import { bookingAddress } from '../bookingAddress.js'
 import booking from "../abi/Booking.json";
 import dayjs from "dayjs";
+import { formatAddr } from '../utils'
 
 function Me() {
   const { data } = useMoralisQuery("UserSchedule");
@@ -76,7 +77,7 @@ function Me() {
                         <div key={idx} onClick={() => setSelectedMeeting(d)}>
                             {dayjs(d.get("meetingTime")).format("MMM DD @ hh:mm a")}
                             {" with "}
-                            {d.get("name") || d.get("requestingUser").get("ethAddress")}
+                            {d.get("name") || formatAddr(d.get("requestingUser").get("ethAddress"))}
                         </div>
                     ))}
                 </div>
