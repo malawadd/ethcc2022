@@ -16,9 +16,10 @@ function Home() {
         <link rel="icon" href="/favicon.ico" />
         
       </Head>
+      <Nav isAuthenticated={isAuthenticated}/>
 
       <main className={styles.main}>
-        <Nav isAuthenticated={isAuthenticated}/>
+       
         <div className="flex flex-col items-center justify-center py-2">
           {isAuthenticated ? (
             <main className="flex flex-col items-center justify-center w-full flex-1 px-20 text-center">
