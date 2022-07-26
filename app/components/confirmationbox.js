@@ -1,5 +1,5 @@
 import dayjs from "dayjs";
-// import BookingForm from "./bookingform";
+import BookingForm from "./bookingform";
 
 function ConfirmationBox({ selectedDay, selectedTime, id }) {
     return (
@@ -23,7 +23,11 @@ function ConfirmationBox({ selectedDay, selectedTime, id }) {
                             {id}
                         </div>
                 </div>
-                BookingForm
+                <BookingForm
+                selectedDay={selectedDay}
+                selectedTime={selectedTime}
+                acptUser={id}
+          />
             
             </div>
         )}
