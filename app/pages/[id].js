@@ -4,6 +4,7 @@ import { useMoralis } from "react-moralis";
 import { useRouter } from "next/router";
 import DayPicker from "../components/daypicker";
 import TimePicker from "../components/timepicker";
+import ConfirmationBox from "../components/confirmationbox";
  
 
 function Booking(){
@@ -40,6 +41,11 @@ function Booking(){
                         <div className="flex justify-evenly w-full">
                             <div className="flex flex-col justify-between">
                                 <DayPicker selectedDay={selectedDay} onChange={onChange}/>
+                                <ConfirmationBox
+                                    id={id}
+                                    selectedDay={selectedDay}
+                                    selectedTime={selectedTime}
+                                />
                             </div>
                             <TimePicker
                                 selectedDay={selectedDay}
