@@ -4,6 +4,7 @@ import Link from 'next/link'
 import { useMoralis } from 'react-moralis'
 import Image from 'next/image'
 import Nav from '../components/nav'
+import CopyURL from '../components/copyurl'
 
 function Home() {
   const { isAuthenticated, user} = useMoralis()
@@ -30,7 +31,7 @@ function Home() {
               <div className="font-bold pt-48 pb-2 underline decoration-8 decoration-[#B4AAD0]">
               My invite URL: localhost:3000/{user.get("ethAddress")}
               </div>
-              <div></div>
+              <CopyURL/>
             </main>
           ):(
             <div className="login__shadow absolute bottom-1/2 text-3xl text-white font-bold">
