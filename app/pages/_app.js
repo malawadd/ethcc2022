@@ -6,8 +6,8 @@ function MyApp({ Component, pageProps }) {
   return (
 
     <MoralisProvider
-      apiKey="process.env.NEXT_PUBLIC_MORALIS_APP_ID"
-      apiSecret="process.env.NEXT_PUBLIC_MORALIS_SERVER_URL"
+    appId={process.env.NEXT_PUBLIC_MORALIS_APP_ID}
+    serverUrl={process.env.NEXT_PUBLIC_MORALIS_SERVER_URL}
       >
         <Component {...pageProps} />
       </MoralisProvider>
