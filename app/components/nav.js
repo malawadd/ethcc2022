@@ -3,10 +3,12 @@ import Link from "next/link";
 
 function Nav() {
   return (
-    <div className="flex flex-col items-center justify-center py-2">
-      <Link href="/">
-        <button className="button__box !mt-20">Login</button>
-      </Link>
+    <div lassName="nav shadow-md shadow-gray-400">
+      <div className="nav-item">
+        <Link href="/">
+          <button className="button__box !mt-20">Main</button>
+        </Link>
+      </div>
       <LoginButton />
     </div>
   );
