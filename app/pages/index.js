@@ -1,5 +1,4 @@
 import Head from 'next/head'
-import styles from '../styles/Home.module.css'
 import Link from 'next/link'
 import { useMoralis } from 'react-moralis'
 import Image from 'next/image'
@@ -23,7 +22,7 @@ function Home() {
       </Head>
       <Nav isAuthenticated={isAuthenticated}/>
 
-      <main className={styles.main}>
+      <main className="">
        
         <div className="flex flex-col items-center justify-center py-2">
           {isAuthenticated ? (
@@ -46,14 +45,14 @@ function Home() {
         </div>
       </main>
 
-      <footer className={styles.footer}>
+      <footer className="">
         <a
           href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
           target="_blank"
           rel="noopener noreferrer"
         >
           Powered by{' '}
-          <span className={styles.logo}>
+          <span className="">
             <Image src="/vercel.svg" alt="Vercel Logo" width={72} height={16} />
           </span>
         </a>
