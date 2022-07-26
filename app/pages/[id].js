@@ -2,6 +2,8 @@ import { useState, useEffect } from "react";
 import Head from "next/head";
 import { useMoralis } from "react-moralis";
 import { useRouter } from "next/router";
+import DayPicker from "../components/daypicker";
+ 
 
 function Booking(){
     const [selectedDay, onChange] = useState(new Date());
@@ -36,7 +38,7 @@ function Booking(){
                         </div>
                         <div className="flex justify-evenly w-full">
                             <div className="flex flex-col justify-between">
-                                daypicker
+                                <DayPicker selectedDay={selectedDay} onChange={onChange}/>
                             </div>
                             timepicker
                         </div>
