@@ -13,7 +13,7 @@ export function LoginButton() {
   if (!isAuthenticated) {
     return (
       <div className="nav-item cursor-pointer" onClick={handleLogin}>
-        please login
+         login
       </div>
     );
   }

@@ -6,7 +6,7 @@ function Nav() {
     <div className="nav shadow-md shadow-gray-400">
       <div className="nav-item">
         <Link href="/">
-          <a>Main</a>
+          <a>CalenderME</a>
         </Link>
       </div>
       <LoginButton />

@@ -11,7 +11,7 @@ function Home() {
   return (
     <div 
     className={`flex flex-col h-screen justify-between ${
-      !isAuthenticated && "bg-login bg-cover bg-center overflow-hidden"
+      !isAuthenticated && "bg-gradient-to-tl from-pink-300 via-purple-300 to-indigo-400 bg-cover bg-center overflow-hidden"
     }`}
   >
       <Head>
@@ -37,16 +37,18 @@ function Home() {
               <CopyURL/>
             </main>
           ):(
-            <div className="login__shadow absolute bottom-1/2 text-3xl text-white font-bold">
-            
+         
+            <div className=" login__shadow absolute bottom-1/2 text-3xl text-white font-bold bg-y">
             please login
-          </div>
+            </div>
+
+         
           )}
         </div>
       </main>
       {/* <main className="mb-auto h-10 bg-green-500"> main</main> */}
       <footer className="p-4 bg-white rounded-lg shadow md:flex md:items-center md:justify-between md:p-6 dark:bg-gray-800 h-10 ">
-      <span className="text-sm text-gray-500 sm:text-center dark:text-gray-400"> © 2022  built For <a href="https://ethcchack.com/" class="hover:underline">Ethcc™</a>. 
+      <span className="text-sm text-gray-500 sm:text-center dark:text-gray-400"> © 2022  built For <a href="https://ethcchack.com/" className="hover:underline">Ethcc™</a>. 
     </span>
   
     
