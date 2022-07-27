@@ -56,10 +56,11 @@ function Me() {
     <>
     <Nav/>
     {console.log(valid)}
+    <nav
+    className= "flex flex-col h-screen justify-between">
     {isAuthenticated ?(
         <div className={`flex flex-col items-center justify-center mt-20 py-2 ${!isAuthenticated && "hidden"}`}>
               <main className="flex flex-col items-center justify-center w-full flex-1 px-20 text-center">
-                hi
               <div className="flex justify-evenly w-full">
                 <div className="flex flex-col">
                 Previous Meetings
@@ -95,7 +96,7 @@ function Me() {
                                 Notes: {selectedMeeting.get("notes")}
                             </div>
                             <div>
-                                Fee: 0.003 ETH
+                                Fee: 0.001 ETH
                             </div>
                             <div>
                                 Duration: {selectedMeeting.get("duration")} mins
@@ -133,7 +134,20 @@ function Me() {
             Please login
         </div>
     )};
-
+    <footer className="p-4 bg-white rounded-lg shadow md:flex md:items-center md:justify-between md:p-6 dark:bg-gray-800 h-fit ">
+      <span className="text-sm text-gray-500 sm:text-center dark:text-gray-400"> © 2022  built For <a href="https://ethcchack.com/" class="hover:underline">Ethcc™</a>. 
+    </span>
+  
+    
+         <a
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Powered by IPFS and Moralis{' '}
+          
+        </a>
+      </footer>
+      </nav>
     
     </>
   );
